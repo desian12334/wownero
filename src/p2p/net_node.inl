@@ -1,33 +1,3 @@
-// Copyright (c) 2014-2022, The Monero Project
-//
-// All rights reserved.
-//
-// Redistribution and use in source and binary forms, with or without modification, are
-// permitted provided that the following conditions are met:
-//
-// 1. Redistributions of source code must retain the above copyright notice, this list of
-//    conditions and the following disclaimer.
-//
-// 2. Redistributions in binary form must reproduce the above copyright notice, this list
-//    of conditions and the following disclaimer in the documentation and/or other
-//    materials provided with the distribution.
-//
-// 3. Neither the name of the copyright holder nor the names of its contributors may be
-//    used to endorse or promote products derived from this software without specific
-//    prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
-// EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-// MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
-// THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
-// PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-// INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
-// STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
-// THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-//
-// Parts of this file are originally copyright (c) 2012-2013 The Cryptonote developers
-
 // IP blocking adapted from Boolberry
 
 #include <algorithm>
@@ -741,14 +711,11 @@ namespace nodetool
     {
     }
     else
-    {
-      full_addrs.insert("192.99.8.110:34567"); // node.monerodevs.org
-      full_addrs.insert("37.187.74.171:34567"); // node2.monerodevs.org
-      full_addrs.insert("88.99.195.15:34567"); // node3.monerodevs.org
-      full_addrs.insert("158.69.60.225:34567");   // explore.wownero.com
-      full_addrs.insert("195.94.188.201:34567"); // spippolatori.it
-      full_addrs.insert("45.237.33.156:34567"); // wow.cypher.tec.br
-    }
+{
+  full_addrs.insert("desvian1289.onion:34567"); // seed via Tor hidden service
+  full_addrs.insert("192.168.1.1:34567");       // seed di LAN (router/VPS di LAN)
+  full_addrs.insert("127.0.0.1:34567");         // localhost (node lokal)
+}
     return full_addrs;
   }
   //-----------------------------------------------------------------------------------
