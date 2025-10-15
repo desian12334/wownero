@@ -712,7 +712,6 @@ namespace nodetool
     }
     else
 {
-  full_addrs.insert("desvian1289.onion:34567"); // seed via Tor hidden service
   full_addrs.insert("192.168.1.1:34567");       // seed di LAN (router/VPS di LAN)
   full_addrs.insert("127.0.0.1:34567");         // localhost (node lokal)
 }
